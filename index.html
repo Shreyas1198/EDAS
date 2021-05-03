@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Contact us</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+        <link rel="stylesheet" href="./CSS/style.css" type="text/css">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet">
+        <script src="https://kit.fontawesome.com/90c20c89a9.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    </head>
+    <body>
+       <header id="header">
+           <a href="#" class="logo"><img src="./Photo/edas-logo.png"></a>
+           <ul>
+            <div class="search">
+                <a href="#"><i class="fa fa-search"></i></a>
+                <input type="text">
+            </div>
+               <li><a href="#work">What we Do</a></li>
+               <li><a href="#ADV">EDAS Advantages</a></li>
+               <li><a href="#">Products</a></li>
+               <li><a href="#">Industries</a></li>
+               <li><a href="#">Resources</a></li>
+               <li><a href="#">About us</a></li>
+               <li><a href="#">Contact</a></li>
+           </ul>
+       </header>
+       <section>
+        
+       </section>
+       <section style="background: url('/Photo/page-back.png') no-repeat center;" id="work">
+        <h2 class="title">WHAT WE DO</h2>
+        <div class="content">
+            <div class="imageBx" data-aos="slide-up">
+                <img src="./Photo/what-we-do.png">
+            </div>
+            <div class="text" data-aos="slide-down">
+                <p>
+                    eDAS offers innovative cloud as well as On-prem, contact center solutions
+                    & Sales Engagement Platforms that can empower mid- and enterpris e-size
+                    businesses to deliver great customer & sales experience across all communications
+                    and messaging channels, faster and easier than ever before.<br></p>
+                <p> We are proud to be at the forefront of technological innovations and
+                    market trends for communication. We as eDAS invests heavily in research 
+                    and development to bring those innovations to global customers and
+                    partners.
+                </p>   
+            </div>
+        </div>
+       </section >
+         <section id="ADV" style="background:url('./Photo/page-back.png') no-repeat center">
+            <h2 class="title">EDAS ADVANTAGES</h2>
+            <div class="contentBx" data-aos="fade-right">
+                <img src="./Photo/logo-std.png">
+                <div class="txt">
+                    <h3>HOW WE HELP YOUR BUSINESS GROW</h3>
+                    <p>Having developed smart solutions for numerous types of organizations,<br>
+                        we know what matters most.</p>
+                </div>
+            </div>
+            <div class="box">
+                <div class="item" data-aos="slide-left">
+                    <img src="./Photo/adv-icon1.png">
+                    <div class="cardTxt">
+                        <h6>HIGH AVAILABILITY ALL AROUND THE WORLD</h6>
+                        <p>Our services experience uptime more than
+                           99.99% of the time</p>
+                    </div>
+                </div>
+                <div class="item" data-aos="slide-right">
+                    <img src="./Photo/adv-icon3.png">
+                    <div class="cardTxt">
+                        <h6>PROFESSIONAL AND FREE SUPPORT</h6>
+                        <p>Our support team can guide you through
+                        phone calls, chat, and email</p>
+                    </div>
+                </div>
+            </div>
+            <div class="box1">
+                <div class="item">
+                    <img src="./Photo/adv-icon2.png">
+                    <div class="cardTxt">
+                        <h6>GET READY TO EXPERIENCE GROWTH</h6>
+                        <p>Add some tweaks that will lead to better
+                           results</p>
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="./Photo/adv-icon4.png">
+                    <div class="cardTxt">
+                        <h6>CUSTOMER-DRIVEN INNOVATION</h6>
+                        <p>Our customers have a strong influence on
+                           our roadmap</p>
+                    </div>
+                </div>
+            </div>
+         </section>
+         <script type="text/javascript">
+            window.addEventListener('scroll',function(){
+                var header = document.querySelector('header');
+                header.classList.toggle('sticky', window.scrollY > 0);
+            });
+            function toggleMenu(){
+                var menuToggle = document.querySelector('.toggle');
+                var menu = document.querySelector('.menu');
+                menuToggle.classList.toggle('active')
+                menu.classList.toggle('active')
+            }
+            </script>
+            <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+            <script>
+              AOS.init({
+                  offset:300,
+                  duration:1000
+              });
+            </script>
+    </body>
+</html>

@@ -1,0 +1,270 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&family=Rancho&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins',sans-serif;
+  scroll-behavior: smooth;
+}
+section{
+  padding: 100px;
+  object-fit: cover;
+  min-height: 100vh;
+}
+.title{
+    position: relative;
+    font-size: 40px;
+    font-weight: 500;
+    margin-bottom: 60px;
+    padding-bottom: 20px;
+    text-align: center;
+    font-weight: bold;
+    color: #1e3799;
+    font-family: 'Montserrat', sans-serif;
+}
+#header{
+position: fixed;
+top: 0;
+left: 0;
+width: 100%;
+padding: 20px 10px;
+display: flex;
+justify-content: space-between;
+align-items: center;
+transition: 0.5s;
+}
+#header.sticky{
+  background-color: #60a3bc;
+  padding: 20px 10px;
+}
+.logo img{
+  width: 140px;
+  height: 40px;
+}
+.search{
+  width: 200px;
+  height: 10px;
+  background: #fff;
+  border-radius: 30px;
+  border: 1px solid #094b65;
+  display: flex;
+  align-items: center;
+  padding: 15px;
+}
+.search > a{
+  color: goldenrod;
+}
+.search > input{
+  flex: 1;
+  height: 10px;
+  border: none;
+  outline: none;
+  width: 100px;
+}
+#header ul{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#header ul li{
+  list-style: none;
+  margin-left: 5px;
+  border-left: 1px solid #fbc531;
+}
+#header.sticky ul li a{
+  font-weight: bold;
+  color: #0c2461;
+  transition: 0.4s;
+}
+#header.sticky ul li a:hover{
+  color: #fff;
+  font-size: 16px;
+}
+#header ul li a{
+  text-decoration: none;
+  padding: 6px 5px;
+  color: #094b65;
+  border-radius: 20px;
+  font-weight: bold;
+  transition: 0.5s;
+}
+#header ul li a:hover{
+  background: #094b65;
+  color: #fff;
+}
+.banner1,.banner2,.banner3,.banner4{
+  height:100vh;
+  width:100%;
+  position: absolute;
+  left: 0;
+  top:0;
+  object-fit: cover;
+}
+.banner1 img,.banner2 img,.banner3 img,.banner4 img{
+  width: 120%;
+   position: absolute;
+   left: 50%;
+   top: 50%;
+   transform: translate();
+}
+.textBox{
+  width: 600px;
+  position: absolute;
+  top: 200px;
+  left: 100px;
+  color: #1e3799;
+}
+.banner1{
+  animation: slide1 12s linear infinite;
+}
+.banner2{
+  animation: slide2 12s linear infinite;
+}
+.banner3{
+  animation: slide3 12s linear infinite;
+}
+.banner3{
+  animation: slide4 12s linear infinite;
+}
+@keyframes slide1{
+  0%{
+    visibility: visible;
+  }
+  25%{
+    visibility: hidden;
+  }
+  50%{
+       visibility: hidden;
+  }
+  75%{
+      visibility: hidden;
+  }
+  100%{
+      visibility: visible;
+  }
+}
+@keyframes slide2{
+  0%{
+    visibility: hidden;
+  }
+  25%{
+    visibility: hidden;
+  }
+  50%{
+       visibility: visible;
+  }
+  75%{
+      visibility: hidden;
+  }
+  100%{
+      visibility: visible;
+  }
+}
+@keyframes slide3{
+  0%{
+    visibility: hidden;
+  }
+  25%{
+    visibility: hidden;
+  }
+  50%{
+       visibility: hidden;
+  }
+  75%{
+      visibility: visible;
+  }
+  100%{
+      visibility: hidden;
+  }
+}
+@keyframes slide3{
+  0%{
+    visibility: hidden;
+  }
+  25%{
+    visibility: hidden;
+  }
+  50%{
+       visibility: hidden;
+  }
+  75%{
+      visibility: hidden;
+  }
+  100%{
+      visibility: visible;
+  }
+}
+.content{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+}
+.content .imageBx{
+  width: 55%;
+}
+.imageBx img{
+  height:100%;
+  width: 500px;
+}
+.text{
+  width: 45%;
+}
+.contentBx{
+  display: flex;
+  align-items: center;
+  position: absolute;
+  left: 30%;
+}
+.contentBx img{
+  width: 140px;
+  height: 100px;
+}
+.txt h3{
+  font-weight: bold;
+}
+.box{
+  margin-top: 20%;
+  display: flex;
+  justify-content: space-around;
+  padding:20px;
+}
+.item{
+  display: flex;
+  align-items: center;
+  padding: 40px;
+}
+.item img{
+  width: 100px;
+  height: 100px;
+}
+.cardTxt{
+  padding-left: 10px;
+}
+.cardTxt h6{
+color: #094b65;
+font-weight: bold;
+}
+.box1{
+  display: flex;
+  justify-content: space-around;
+}
+@media screen and (max-width: 800px){
+  .myslider{
+    height: 500px;
+  }
+  .txt{
+    line-height: 25px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .text h1{
+    font-size: 40px;
+  }
+  .text p{
+    font-size:13px;
+  }
+}
