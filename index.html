@@ -27,9 +27,64 @@
            </ul>
        </header>
        <section>
-        
+        <div class="img-slider">
+            <div class="slide active">
+              <img src="./Photo/page-back.png" alt="">
+              <div class="info">
+                <h2>WE SIMPLIFY
+                    YOUR BUSINESS
+                    TO GROW</h2>
+                <p>We Simplify Your Business To Grow
+                    We Simplify Your Business</p>
+              </div>
+            </div>
+            <div class="slide">
+              <img src="./Photo/slide-2.png" alt="">
+              <div class="info">
+                <h2>WE SIMPLIFY
+                    YOUR BUSINESS
+                    TO GROW</h2>
+                <p>We Simplify Your Business To Grow
+                    We Simplify Your Business</p>
+              </div>
+            </div>
+            <div class="slide">
+              <img src="./Photo/slide-3.png" alt="">
+              <div class="info">
+                <h2>CONNECT
+                    TO <span>GROW</span></h2>
+                <p>We Simplify Your Business To Grow We Simplify
+                    We Simplify Your Business</p>
+              </div>
+            </div>
+            <div class="slide">
+              <img src="./Photo/page-back.png" alt="">
+              <div class="info">
+                <h2>Slide 04</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+              </div>
+            </div>
+            <div class="slide">
+              <img src="./Photo/slide-3.png" alt="">
+              <div class="info">
+                <h2>WE SIMPLIFY
+                    YOUR BUSINESS
+                    TO GROW</h2>
+                <p>We Simplify Your Business To Grow
+                    We Simplify Your Business</p>
+              </div>
+            </div>
+            <div class="navigation">
+              <div class="btn active"></div>
+              <div class="btn"></div>
+              <div class="btn"></div>
+              <div class="btn"></div>
+              <div class="btn"></div>
+            </div>
+          </div>
+      
        </section>
-       <section style="background: url('/Photo/page-back.png') no-repeat center;" id="work">
+       <section style="background: url('/Photo/page-back.png') no-repeat center;background-size: cover;" id="work">
         <h2 class="title">WHAT WE DO</h2>
         <div class="content">
             <div class="imageBx" data-aos="slide-up">
@@ -49,7 +104,7 @@
             </div>
         </div>
        </section >
-         <section id="ADV" style="background:url('./Photo/page-back.png') no-repeat center">
+         <section id="ADV" style="background:url('./Photo/page-back.png') no-repeat center;background-size: cover;">
             <h2 class="title">EDAS ADVANTAGES</h2>
             <div class="contentBx" data-aos="fade-right">
                 <img src="./Photo/logo-std.png">
@@ -107,7 +162,60 @@
                 menuToggle.classList.toggle('active')
                 menu.classList.toggle('active')
             }
-            </script>
+
+    var slides = document.querySelectorAll('.slide');
+    var btns = document.querySelectorAll('.btn');
+    let currentSlide = 1;
+
+    // Javascript for image slider manual navigation
+    var manualNav = function(manual){
+      slides.forEach((slide) => {
+        slide.classList.remove('active');
+
+        btns.forEach((btn) => {
+          btn.classList.remove('active');
+        });
+      });
+
+      slides[manual].classList.add('active');
+      btns[manual].classList.add('active');
+    }
+
+    btns.forEach((btn, i) => {
+      btn.addEventListener("click", () => {
+        manualNav(i);
+        currentSlide = i;
+      });
+    });
+
+    // Javascript for image slider autoplay navigation
+    var repeat = function(activeClass){
+      let active = document.getElementsByClassName('active');
+      let i = 1;
+
+      var repeater = () => {
+        setTimeout(function(){
+          [...active].forEach((activeSlide) => {
+            activeSlide.classList.remove('active');
+          });
+
+        slides[i].classList.add('active');
+        btns[i].classList.add('active');
+        i++;
+
+        if(slides.length == i){
+          i = 0;
+        }
+        if(i >= slides.length){
+          return;
+        }
+        repeater();
+      }, 10000);
+      }
+      repeater();
+    }
+    repeat();
+</script>
             <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
             <script>
               AOS.init({
